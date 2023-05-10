@@ -9,10 +9,10 @@
       "name": "SERVER_DOMAIN"
     }
   ],
-  "logo": "https://raw.githubusercontent.com/tomwojcik/homeserver-traefik-portainer/17225eb614a986de9cbf33512d4b1395376b684f/stacks/gogs/logo.png",
+  "logo": "https://raw.githubusercontent.com/kevinclement/homeserver-traefik-portainer/17225eb614a986de9cbf33512d4b1395376b684f/stacks/gogs/logo.png",
   "platform": "linux",
   "repository": {
     "stackfile": "stacks/gogs/docker-compose.yml",
-    "url": "https://github.com/tomwojcik/homeserver-traefik-portainer"
+    "url": "https://github.com/kevinclement/homeserver-traefik-portainer"
   }
 }

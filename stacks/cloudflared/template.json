@@ -13,6 +13,6 @@
   "platform": "linux",
   "repository": {
     "stackfile": "stacks/cloudflared/docker-compose.yml",
-    "url": "https://github.com/tomwojcik/homeserver-traefik-portainer"
+    "url": "https://github.com/kevinclement/homeserver-traefik-portainer"
   }
 }

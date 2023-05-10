@@ -9,10 +9,10 @@
       "name": "SERVER_DOMAIN"
     }
   ],
-  "logo": "https://raw.githubusercontent.com/tomwojcik/homeserver-traefik-portainer/3b98d68b5cd095301faa643bfb1186860b099b51/stacks/cadvisor/logo.png",
+  "logo": "https://raw.githubusercontent.com/kevinclement/homeserver-traefik-portainer/3b98d68b5cd095301faa643bfb1186860b099b51/stacks/cadvisor/logo.png",
   "platform": "linux",
   "repository": {
     "stackfile": "stacks/cadvisor/docker-compose.yml",
-    "url": "https://github.com/tomwojcik/homeserver-traefik-portainer"
+    "url": "https://github.com/kevinclement/homeserver-traefik-portainer"
   }
 }
