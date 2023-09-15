@@ -254,11 +254,6 @@
                     "default": "100",
                     "label": "PGID",
                     "name": "PGID"
-                },
-                {
-                    "label": "VERSION",
-                    "name": "VERSION",
-                    "set": "latest"
                 }
             ],
             "platform": "linux",
