@@ -5,8 +5,8 @@ services:
     container_name: sabnzbd
     restart: unless-stopped
     environment:
-      - PUID=1028
-      - PGID=65537
+      - PUID=1032
+      - PGID=100
       - TZ=America/Los_Angeles      
     networks:
       - traefik
