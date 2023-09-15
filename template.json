@@ -83,7 +83,7 @@
                 }
             ],
             "platform": "linux",
-            "logo": "https://github.com/kevinclement/homeserver-traefik-portainer/blob/cadba028f052a237c4046c60f1730b078f9fa5bc/stacks/sabnzbd/logo.png",
+            "logo": "https://raw.githubusercontent.com/kevinclement/homeserver-traefik-portainer/cadba028f052a237c4046c60f1730b078f9fa5bc/stacks/sabnzbd/logo.png",
             "repository": {
                 "stackfile": "stacks/sabnzbd/docker-compose.yml",
                 "url": "https://github.com/kevinclement/homeserver-traefik-portainer"
