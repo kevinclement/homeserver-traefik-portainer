@@ -1,0 +1,25 @@
+version: "3.3"
+services:
+  homepage:
+    image: ghcr.io/benphelps/homepage:latest
+    container_name: homepage
+    restart: unless-stopped
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=America/Los_Angeles      
+    networks:
+      - traefik
+    volumes:
+      - /volume1/docker/homepage:/config:rw
+    labels:
+      my.zone: homeserver
+      traefik.enable: true
+      traefik.http.routers.homepage.rule: Host(`homepage.${SERVER_DOMAIN}`)
+      traefik.http.routers.homepage.entrypoints: websecure
+      traefik.http.services.homepage.loadbalancer.server.port: 3000
+
+networks:
+  traefik:
+    name: homeserver
+    external: true

@@ -1,0 +1,27 @@
+{
+  "type": 3,
+  "name": "homepage",
+  "title": "Homepage",
+  "description": "highly customizable application dashboard",
+  "env": [{
+    "default": "kevinc.cloud",
+    "label": "SERVER_DOMAIN",
+    "name": "SERVER_DOMAIN"
+  },
+  {
+    "default": "1032",
+    "label": "PUID",
+    "name": "PUID"
+  },
+  {
+    "default": "100",
+    "label": "PGID",
+    "name": "PGID"
+  }],
+  "platform": "linux",
+  "logo": "https://raw.githubusercontent.com/kevinclement/homeserver-traefik-portainer/0069f4919d328614578e7861549d7b31e9a572c2/stacks/homepage/logo.png",
+  "repository": {
+    "stackfile": "stacks/homepage/docker-compose.yml",
+    "url": "https://github.com/kevinclement/homeserver-traefik-portainer"
+  }
+}
