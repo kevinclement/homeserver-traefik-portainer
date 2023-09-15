@@ -1,0 +1,26 @@
+version: '3'
+services:
+  sabnzbd:
+    image: linuxserver/sabnzbd:latest
+    container_name: sabnzbd
+    restart: unless-stopped
+    environment:
+      - PUID=1028
+      - PGID=65537
+      - TZ=America/Los_Angeles      
+    networks:
+      - traefik
+    volumes:
+      - /volume1/docker/sabnzbd:/config:rw
+      - /volume1/Data/Downloads/Usenet:/Data/Downloads/Usenet:rw
+    labels:
+      my.zone: homeserver
+      traefik.enable: true
+      traefik.http.routers.sabnzbd.rule: Host(`sabnzbd.${SERVER_DOMAIN}`)
+      traefik.http.routers.sabnzbd.entrypoints: websecure
+      traefik.http.services.sabnzbd.loadbalancer.server.port: 8080
+
+networks:
+  traefik:
+    name: homeserver
+    external: true
