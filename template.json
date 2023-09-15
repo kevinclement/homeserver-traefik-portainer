@@ -78,6 +78,7 @@
             "description": "SABnzbd is a multi-platform binary newsgroup downloader.",
             "env": [
                 {
+                    "default": "kevinc.cloud",
                     "label": "SERVER_DOMAIN",
                     "name": "SERVER_DOMAIN"
                 }
@@ -130,6 +131,35 @@
             "platform": "linux",
             "repository": {
                 "stackfile": "stacks/minio/docker-compose.yml",
+                "url": "https://github.com/kevinclement/homeserver-traefik-portainer"
+            }
+        },
+        {
+            "type": 3,
+            "name": "radarr",
+            "title": "Radarr",
+            "description": "A fork of Sonarr to work with movies \u00e0 la Couchpotato.",
+            "env": [
+                {
+                    "default": "kevinc.cloud",
+                    "label": "SERVER_DOMAIN",
+                    "name": "SERVER_DOMAIN"
+                },
+                {
+                    "default": "1032",
+                    "label": "PUID",
+                    "name": "PUID"
+                },
+                {
+                    "default": "100",
+                    "label": "PGID",
+                    "name": "PGID"
+                }
+            ],
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/kevinclement/homeserver-traefik-portainer/159ff60634614c9b76d8ad5d49551e6b499acddd/stacks/radarr/logo.png",
+            "repository": {
+                "stackfile": "stacks/radarr/docker-compose.yml",
                 "url": "https://github.com/kevinclement/homeserver-traefik-portainer"
             }
         },
@@ -196,6 +226,40 @@
         },
         {
             "type": 3,
+            "name": "plex",
+            "title": "Plex",
+            "description": "Your favorite movies, TV, music, web shows, podcasts, and more, all streamed to your favorite screens.",
+            "env": [
+                {
+                    "default": "kevinc.cloud",
+                    "label": "SERVER_DOMAIN",
+                    "name": "SERVER_DOMAIN"
+                },
+                {
+                    "default": "1032",
+                    "label": "PUID",
+                    "name": "PUID"
+                },
+                {
+                    "default": "100",
+                    "label": "PGID",
+                    "name": "PGID"
+                },
+                {
+                    "label": "VERSION",
+                    "name": "VERSION",
+                    "set": "latest"
+                }
+            ],
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/kevinclement/homeserver-traefik-portainer/159ff60634614c9b76d8ad5d49551e6b499acddd/stacks/plex/logo.png",
+            "repository": {
+                "stackfile": "stacks/plex/docker-compose.yml",
+                "url": "https://github.com/kevinclement/homeserver-traefik-portainer"
+            }
+        },
+        {
+            "type": 3,
             "name": "Heimdall",
             "title": "Heimdall",
             "description": "Landing page for the homeserver.",
@@ -227,6 +291,35 @@
             "platform": "linux",
             "repository": {
                 "stackfile": "stacks/gogs/docker-compose.yml",
+                "url": "https://github.com/kevinclement/homeserver-traefik-portainer"
+            }
+        },
+        {
+            "type": 3,
+            "name": "sonarr",
+            "title": "Sonarr",
+            "description": "Sonarr is a PVR for Usenet and BitTorrent users.",
+            "env": [
+                {
+                    "default": "kevinc.cloud",
+                    "label": "SERVER_DOMAIN",
+                    "name": "SERVER_DOMAIN"
+                },
+                {
+                    "default": "1032",
+                    "label": "PUID",
+                    "name": "PUID"
+                },
+                {
+                    "default": "100",
+                    "label": "PGID",
+                    "name": "PGID"
+                }
+            ],
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/kevinclement/homeserver-traefik-portainer/159ff60634614c9b76d8ad5d49551e6b499acddd/stacks/sonarr/logo.png",
+            "repository": {
+                "stackfile": "stacks/sonarr/docker-compose.yml",
                 "url": "https://github.com/kevinclement/homeserver-traefik-portainer"
             }
         },
