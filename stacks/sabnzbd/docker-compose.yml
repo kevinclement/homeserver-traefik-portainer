@@ -12,7 +12,7 @@ services:
       - traefik
     volumes:
       - /volume1/docker/sabnzbd:/config:rw
-      - /volume1/Data/Downloads/Usenet:/Data/Downloads/Usenet:rw
+      - /volume1/Data/usenet:/Data/usenet:rw
     labels:
       my.zone: homeserver
       traefik.enable: true
