@@ -19,7 +19,7 @@
     "name": "PGID"
   }],
   "platform": "linux",
-  "logo": "https://raw.githubusercontent.com/kevinclement/homeserver-traefik-portainer/0069f4919d328614578e7861549d7b31e9a572c2/stacks/homepage/logo.png",
+  "logo": "https://raw.githubusercontent.com/kevinclement/homeserver-traefik-portainer/509ff86118549c0e53811fcf62c8bd57b43d908f/stacks/homepage/logo.png",
   "repository": {
     "stackfile": "stacks/homepage/docker-compose.yml",
     "url": "https://github.com/kevinclement/homeserver-traefik-portainer"
