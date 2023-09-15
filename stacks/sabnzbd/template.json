@@ -4,6 +4,7 @@
   "title": "SABnzbd",
   "description": "SABnzbd is a multi-platform binary newsgroup downloader.",
   "env": [{
+    "default": "kevinc.cloud",
     "label": "SERVER_DOMAIN",
     "name": "SERVER_DOMAIN"
   }],

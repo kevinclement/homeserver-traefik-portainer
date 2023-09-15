@@ -1,0 +1,29 @@
+{
+  "type": 3,
+  "name": "radarr",
+  "title": "Radarr",
+  "description": "A fork of Sonarr to work with movies à la Couchpotato.",
+  "env": [
+    {
+      "default": "kevinc.cloud",
+      "label": "SERVER_DOMAIN",
+      "name": "SERVER_DOMAIN"
+    },
+    {
+      "default": "1032",
+      "label": "PUID",
+      "name": "PUID"
+    },
+    {
+      "default": "100",
+      "label": "PGID",
+      "name": "PGID"
+    }
+  ],
+  "platform": "linux",
+  "logo": "https://raw.githubusercontent.com/kevinclement/homeserver-traefik-portainer/159ff60634614c9b76d8ad5d49551e6b499acddd/stacks/radarr/logo.png",
+  "repository": {
+    "stackfile": "stacks/radarr/docker-compose.yml",
+    "url": "https://github.com/kevinclement/homeserver-traefik-portainer"
+  }
+}

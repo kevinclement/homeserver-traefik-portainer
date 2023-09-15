@@ -1,0 +1,24 @@
+version: '3'
+services:
+  radarr:
+    image: hotio/radarr:release
+    container_name: radarr
+    restart: unless-stopped
+    environment:
+      - TZ=America/Los_Angeles
+    networks:
+      - traefik
+    volumes:
+      - /volume1/docker/radarr:/config:rw
+      - /volume1/Data:/Data:rw
+    labels:
+      my.zone: homeserver
+      traefik.enable: true
+      traefik.http.routers.radarr.rule: Host(`radarr.${SERVER_DOMAIN}`)
+      traefik.http.routers.radarr.entrypoints: websecure
+      traefik.http.services.radarr.loadbalancer.server.port: 7878
+
+networks:
+  traefik:
+    name: homeserver
+    external: true

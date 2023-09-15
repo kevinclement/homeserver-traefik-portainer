@@ -1,0 +1,27 @@
+{
+  "type": 3,
+  "name": "sonarr",
+  "title": "Sonarr",
+  "description": "Sonarr is a PVR for Usenet and BitTorrent users.",
+  "env": [{
+    "default": "kevinc.cloud",
+    "label": "SERVER_DOMAIN",
+    "name": "SERVER_DOMAIN"
+  },
+  {
+    "default": "1032",
+    "label": "PUID",
+    "name": "PUID"
+  },
+  {
+    "default": "100",
+    "label": "PGID",
+    "name": "PGID"
+  }],
+  "platform": "linux",
+  "logo": "https://raw.githubusercontent.com/kevinclement/homeserver-traefik-portainer/159ff60634614c9b76d8ad5d49551e6b499acddd/stacks/sonarr/logo.png",
+  "repository": {
+    "stackfile": "stacks/sonarr/docker-compose.yml",
+    "url": "https://github.com/kevinclement/homeserver-traefik-portainer"
+  }
+}

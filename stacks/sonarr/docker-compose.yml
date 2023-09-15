@@ -1,0 +1,24 @@
+version: '3'
+services:
+  sonarr:
+    image: hotio/sonarr:release
+    container_name: sonarr
+    restart: unless-stopped
+    environment:
+      - TZ=America/Los_Angeles      
+    networks:
+      - traefik
+    volumes:
+      - /volume1/docker/sonarr:/config:rw
+      - /volume1/Data:/Data:rw
+    labels:
+      my.zone: homeserver
+      traefik.enable: true
+      traefik.http.routers.sonarr.rule: Host(`sonarr.${SERVER_DOMAIN}`)
+      traefik.http.routers.sonarr.entrypoints: websecure
+      traefik.http.services.sonarr.loadbalancer.server.port: 8989
+
+networks:
+  traefik:
+    name: homeserver
+    external: true
