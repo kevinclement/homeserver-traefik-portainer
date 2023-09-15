@@ -81,6 +81,16 @@
                     "default": "kevinc.cloud",
                     "label": "SERVER_DOMAIN",
                     "name": "SERVER_DOMAIN"
+                },
+                {
+                    "default": "1032",
+                    "label": "PUID",
+                    "name": "PUID"
+                },
+                {
+                    "default": "100",
+                    "label": "PGID",
+                    "name": "PGID"
                 }
             ],
             "platform": "linux",

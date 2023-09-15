@@ -5,6 +5,8 @@ services:
     container_name: radarr
     restart: unless-stopped
     environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
       - TZ=America/Los_Angeles
     networks:
       - traefik

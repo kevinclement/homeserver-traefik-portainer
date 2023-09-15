@@ -7,6 +7,16 @@
     "default": "kevinc.cloud",
     "label": "SERVER_DOMAIN",
     "name": "SERVER_DOMAIN"
+  },
+  {
+    "default": "1032",
+    "label": "PUID",
+    "name": "PUID"
+  },
+  {
+    "default": "100",
+    "label": "PGID",
+    "name": "PGID"
   }],
   "platform": "linux",
   "logo": "https://raw.githubusercontent.com/kevinclement/homeserver-traefik-portainer/cadba028f052a237c4046c60f1730b078f9fa5bc/stacks/sabnzbd/logo.png",
