@@ -4,14 +4,11 @@ services:
     image: ghcr.io/benphelps/homepage:latest
     container_name: homepage
     restart: unless-stopped
-    environment:
-      - PUID=${PUID}
-      - PGID=${PGID}
-      - TZ=America/Los_Angeles      
     networks:
       - traefik
     volumes:
       - /volume1/docker/homepage:/config:rw
+      - /var/run/docker.sock:/var/run/docker.sock
     labels:
       my.zone: homeserver
       traefik.enable: true
