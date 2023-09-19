@@ -1,0 +1,107 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/en/configs/services
+
+- System Management:
+    - Synology DSM:
+        icon: synology-dsm.png
+        href: http://nas:5000/
+        description: Synology Disk Station Manager
+        # widget:
+        #     type: diskstation
+        #     url: http://192.168.1.177
+        #     username: remote_stats
+        #     password: dnj4atd2akh7RGD@xuz
+        #     volume: volume_N # optional
+    - Dozzle:
+        icon: dozzle.png
+        href: https://dozzle.kevinc.cloud/
+        description: Realtime log viewer
+        server: my-docker
+        container: dozzle
+    - Portainer:
+        icon: portainer.png
+        href: https://portainer.kevinc.cloud/
+        description: Docker container management
+        server: my-docker
+        container: portainer
+        widget:
+          type: portainer
+          url: http://portainer.kevinc.cloud
+          env: 1
+          key: XXX__MY__KEY__XXX
+    - Traefik:
+        icon: traefik.png
+        href: https://traefik.kevinc.cloud/
+        description: Application Proxy
+        server: my-docker
+        container: traefik
+        widget:
+            type: traefik
+            url: https://traefik.kevinc.cloud/
+
+- Media:
+    - Plex:
+        icon: plex.png
+        href: https://plex.kevinc.cloud/
+        description: Media Streaming
+        server: my-docker
+        container: plex
+        widget:
+          type: plex
+          url: http://plex.kevinc.cloud
+          key: XXX__MY__KEY__XXX
+    - Radarr:
+        icon: radarr.png
+        href: https://radarr.kevinc.cloud/
+        description: Movie Downloader
+        server: my-docker
+        container: radarr
+        widget:
+          type: radarr
+          url: http://radarr.kevinc.cloud
+          key: XXX__MY__KEY__XXX
+    - Sonarr:
+        icon: sonarr.png
+        href: https://sonarr.kevinc.cloud/
+        description: TV Show Downloader
+        server: my-docker
+        container: sonarr
+        widget:
+          type: sonarr
+          url: http://sonarr.kevinc.cloud
+          key: XXX__MY__KEY__XXX
+    - Sabnzbd:
+        icon: sabnzbd.png
+        href: https://sabnzbd.kevinc.cloud/
+        description: Newsgroup Downloader
+        server: my-docker
+        container: sabnzbd
+        widget:
+          type: sabnzbd
+          url: http://sabnzbd.kevinc.cloud
+          key: XXX__MY__KEY__XXX
+
+- Unifi:
+    - Controller:
+        icon: unifi-controller.png
+        href: https://192.168.1.1/network/default/dashboard
+        description: Unifi Controller
+        widget:
+            type: unifi
+            url: https://24.16.41.24
+            username: unifi_stats
+            password: XXX__MY__PASS__XXX
+            # site: Site Name 
+    - Protect:
+        icon: unifi-protect.png
+        href: https://192.168.1.1/protect/dashboard
+        description: Unifi Protect
+
+# TODO: use DDSN to get external IP
+
+# - Home Automation:
+# TODO: 
+#   HomeAssistant
+#   HomeBridge
+#   PiHole

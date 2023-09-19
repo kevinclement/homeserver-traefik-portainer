@@ -1,0 +1,42 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/en/configs/settings
+
+title: Kevin's Homeserver
+
+headerStyle: boxed
+showStats: true
+# https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=2560&q=80
+# https://images.unsplash.com/photo-1502790671504-542ad42d5189?auto=format&fit=crop&w=2560&q=80
+background: 
+  image: https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=2560&q=80
+  opacity: 5 # 0-100
+
+
+
+providers:
+  openweathermap: openweathermapapikey
+  weatherapi: weatherapiapikey
+
+# cloud    : https://cdn-icons-png.flaticon.com/512/252/252035.png
+# wrench   : https://cdn-icons-png.flaticon.com/512/252/252021.png
+# computer : https://cdn-icons-png.flaticon.com/512/251/251992.png
+# gears    : https://cdn-icons-png.flaticon.com/512/252/252018.png
+# notes    : https://cdn-icons-png.flaticon.com/512/148/148722.png
+# play     : https://cdn-icons-png.flaticon.com/512/148/148733.png
+# film     : https://cdn-icons-png.flaticon.com/512/148/148709.png
+
+layout:
+  System Management:
+    icon: https://cdn-icons-png.flaticon.com/512/252/252018.png
+    style: row
+    columns: 4
+  Media:
+    icon: https://cdn-icons-png.flaticon.com/512/148/148709.png
+    style: row
+    columns: 4
+  Unifi:
+    icon: unifi.png
+    style: row
+    columns: 2
+  
