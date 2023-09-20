@@ -7,8 +7,7 @@ services:
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
-    networks:
-      - traefik
+    network_mode: host
     volumes:
       - /volume1/docker/homebridge:/homebridge:rw
     logging:
@@ -16,14 +15,3 @@ services:
       options:
         max-size: "10mb"
         max-file: "1"
-    labels:
-      my.zone: homeserver
-      traefik.enable: true
-      traefik.http.routers.homebridge.rule: Host(`homebridge.${SERVER_DOMAIN}`)
-      traefik.http.routers.homebridge.entrypoints: websecure
-      traefik.http.services.homebridge.loadbalancer.server.port: 8581
-    
-networks:
-  traefik:
-    name: homeserver
-    external: true
