@@ -55,6 +55,30 @@
         },
         {
             "type": 3,
+            "name": "cloudflare-ddns",
+            "title": "cloudflare-ddns",
+            "description": "Access your home network remotely",
+            "env": [
+                {
+                    "default": "1032",
+                    "label": "PUID",
+                    "name": "PUID"
+                },
+                {
+                    "default": "100",
+                    "label": "PGID",
+                    "name": "PGID"
+                }
+            ],
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/kevinclement/homeserver-traefik-portainer/4d856063a56867f236b6070d13586d5196927bf4/stacks/cloudflare-ddns/logo.png",
+            "repository": {
+                "stackfile": "stacks/cloudflare-ddns/docker-compose.yml",
+                "url": "https://github.com/kevinclement/homeserver-traefik-portainer"
+            }
+        },
+        {
+            "type": 3,
             "name": "CyberChef",
             "title": "CyberChef",
             "description": "The Cyber Swiss Army Knife - a web app for encryption, encoding, compression and data analysis.",
@@ -279,24 +303,6 @@
             "logo": "https://raw.githubusercontent.com/kevinclement/homeserver-traefik-portainer/159ff60634614c9b76d8ad5d49551e6b499acddd/stacks/plex/logo.png",
             "repository": {
                 "stackfile": "stacks/plex/docker-compose.yml",
-                "url": "https://github.com/kevinclement/homeserver-traefik-portainer"
-            }
-        },
-        {
-            "type": 3,
-            "name": "Heimdall",
-            "title": "Heimdall",
-            "description": "Landing page for the homeserver.",
-            "env": [
-                {
-                    "label": "SERVER_DOMAIN",
-                    "name": "SERVER_DOMAIN"
-                }
-            ],
-            "logo": "https://raw.githubusercontent.com/kevinclement/homeserver-traefik-portainer/17225eb614a986de9cbf33512d4b1395376b684f/stacks/heimdall/logo.png",
-            "platform": "linux",
-            "repository": {
-                "stackfile": "stacks/heimdall/docker-compose.yml",
                 "url": "https://github.com/kevinclement/homeserver-traefik-portainer"
             }
         },
