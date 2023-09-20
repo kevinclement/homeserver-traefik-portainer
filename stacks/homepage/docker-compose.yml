@@ -12,7 +12,10 @@ services:
     labels:
       my.zone: homeserver
       traefik.enable: true
-      traefik.http.routers.homepage.rule: Host(`homepage.${SERVER_DOMAIN}`)
+      traefik.http.routers.homepage.rule: 
+        Host(`homepage.${SERVER_DOMAIN}`) || 
+        Host(`www.${SERVER_DOMAIN}`) || 
+        Host(`${SERVER_DOMAIN}`)
       traefik.http.routers.homepage.entrypoints: websecure
       traefik.http.services.homepage.loadbalancer.server.port: 3000
 
