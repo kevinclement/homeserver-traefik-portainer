@@ -1,0 +1,29 @@
+{
+  "type": 3,
+  "name": "pihole",
+  "title": "pihole",
+  "description": "A Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole.",
+  "env": [
+    {
+      "default": "kevinc.cloud",
+      "label": "SERVER_DOMAIN",
+      "name": "SERVER_DOMAIN"
+    },
+    {
+      "default": "1032",
+      "label": "PUID",
+      "name": "PUID"
+    },
+    {
+      "default": "100",
+      "label": "PGID",
+      "name": "PGID"
+    }
+  ],
+  "platform": "linux",
+  "logo": "https://raw.githubusercontent.com/kevinclement/homeserver-traefik-portainer/7cc21b878e6c780119b6fc73044e529f39452b3f/stacks/pihole/logo.png",
+  "repository": {
+    "stackfile": "stacks/pihole/docker-compose.yml",
+    "url": "https://github.com/kevinclement/homeserver-traefik-portainer"
+  }
+}

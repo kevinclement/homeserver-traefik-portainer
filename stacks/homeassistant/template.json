@@ -1,0 +1,29 @@
+{
+  "type": 3,
+  "name": "HomeAssistant",
+  "title": "HomeAssistant",
+  "description": "Open source home automation that puts local control and privacy first.",
+  "env": [
+    {
+      "default": "kevinc.cloud",
+      "label": "SERVER_DOMAIN",
+      "name": "SERVER_DOMAIN"
+    },
+    {
+      "default": "1032",
+      "label": "PUID",
+      "name": "PUID"
+    },
+    {
+      "default": "100",
+      "label": "PGID",
+      "name": "PGID"
+    }
+  ],
+  "platform": "linux",
+  "logo": "https://raw.githubusercontent.com/kevinclement/homeserver-traefik-portainer/935708054de2ed9076151d64b0908a00a207fd44/stacks/homeassistant/logo.png",
+  "repository": {
+    "stackfile": "stacks/homeassistant/docker-compose.yml",
+    "url": "https://github.com/kevinclement/homeserver-traefik-portainer"
+  }
+}

@@ -1,0 +1,29 @@
+version: '3'
+services:
+  homebridge:
+    image: homebridge/homebridge:latest
+    container_name: homebridge
+    restart: unless-stopped
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+    networks:
+      - traefik
+    volumes:
+      - /volume1/docker/homebridge:/homebridge:rw
+    logging:
+      driver: json-file
+      options:
+        max-size: "10mb"
+        max-file: "1"
+    labels:
+      my.zone: homeserver
+      traefik.enable: true
+      traefik.http.routers.homebridge.rule: Host(`homebridge.${SERVER_DOMAIN}`)
+      traefik.http.routers.homebridge.entrypoints: websecure
+      traefik.http.services.homebridge.loadbalancer.server.port: 8581
+    
+networks:
+  traefik:
+    name: homeserver
+    external: true

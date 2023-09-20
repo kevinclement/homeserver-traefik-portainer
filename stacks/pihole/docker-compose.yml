@@ -1,0 +1,31 @@
+version: '3'
+services:
+  pihole:
+    image: pihole/pihole:latest
+    container_name: pihole
+    restart: unless-stopped
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+    networks:
+      - traefik
+    volumes:
+      - /volume1/docker/pihole/config:/etc/pihole:rw
+      - /volume1/docker/pihole/dns:/etc/dnsmasq.d:rw
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "67:67/udp"
+      - "1010:80/tcp"
+      - "4443:443/tcp"
+    labels:
+      my.zone: homeserver
+      traefik.enable: true
+      traefik.http.routers.pihole.rule: Host(`pihole.${SERVER_DOMAIN}`)
+      traefik.http.routers.pihole.entrypoints: websecure
+      traefik.http.services.pihole.loadbalancer.server.port: 1010
+    
+networks:
+  traefik:
+    name: homeserver
+    external: true
