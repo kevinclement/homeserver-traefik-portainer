@@ -8,11 +8,26 @@ services:
       - PUID=${PUID}
       - PGID=${PGID}
       - TZ=America/Los_Angeles
-      - VIRTUAL_HOST=192.168.0.2
       - ServerIP=192.168.1.177
-      - WEB_PORT=37337
-      - WEBPASSWORD=pihole311
-    network_mode: host
+      - WEBPASSWORD='pihole311'
+    cap_add:
+      - NET_ADMIN
+    networks:
+      - traefik
+    dns:
+      - 127.0.0.1
+      - 8.8.8.8
+    ports:
+      - 443/tcp
+      - 53/tcp
+      - 53/udp
+      - 67/udp
+      - 80/tcp
     volumes:
       - /volume1/docker/pihole/config:/etc/pihole:rw
       - /volume1/docker/pihole/dns:/etc/dnsmasq.d:rw
+
+networks:
+  traefik:
+    name: pi_network
+    external: true
