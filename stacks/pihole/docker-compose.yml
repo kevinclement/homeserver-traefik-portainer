@@ -8,6 +8,10 @@ services:
       - PUID=${PUID}
       - PGID=${PGID}
       - TZ=America/Los_Angeles
+      - VIRTUAL_HOST=192.168.0.2
+      - ServerIP=192.168.1.177
+      - WEB_PORT=37337
+      - WEBPASSWORD=pihole311
     network_mode: host
     volumes:
       - /volume1/docker/pihole/config:/etc/pihole:rw
